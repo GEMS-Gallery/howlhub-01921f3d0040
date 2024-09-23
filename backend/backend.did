@@ -1,0 +1,11 @@
+type Fact = 
+ record {
+   content: text;
+   id: nat;
+   votes: int;
+ };
+service : {
+  addFact: (text) -> (nat);
+  getAllFacts: () -> (vec Fact) query;
+  voteFact: (nat, bool) -> (bool);
+}
